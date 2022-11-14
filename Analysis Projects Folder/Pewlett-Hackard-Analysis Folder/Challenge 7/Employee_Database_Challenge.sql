@@ -8,7 +8,7 @@ on (e.emp_no = ti.emp_no)
 where (e.birth_date between '1952-01-01' and '1955-12-31')
 order by e.emp_no;
 
--- Use Dictinct with Orderby to remove duplicate row
+-- Use Distinct with Orderby to remove duplicate row
 
 SELECT DISTINCT ON (rt.title) rt.emp_no,
 rt.first_name,
