@@ -39,3 +39,11 @@ on (e.emp_no = t.emp_no)
 where (de.to_date = '9999-01-01')
 and (e.birth_date between '1965-01-01' and '1965-12-31')
 order by e.emp_no;
+
+-- Deliverable 3
+
+SELECT count(me.titles), me.title
+-- INTO retirint_titles
+FROM unique_titles as ut
+Group BY ut.title 
+order by count DESC;

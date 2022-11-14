@@ -22,7 +22,7 @@ ORDER BY emp_no, to_date DESC;
 -- Count of Titles
 
 SELECT count(ut.titles), ut.title
--- INTO retirint_titles
+-- INTO retiring_titles
 FROM unique_titles as ut
 Group BY ut.title 
 order by count DESC;
@@ -39,3 +39,11 @@ on (e.emp_no = t.emp_no)
 where (de.to_date = '9999-01-01')
 and (e.birth_date between '1965-01-01' and '1965-12-31')
 order by e.emp_no;
+
+-- Deliverable 3
+
+SELECT count(me.title), me.title
+-- INTO retiring_titles
+FROM mentorship_eligibility as me
+Group BY me.title 
+order by count DESC;
